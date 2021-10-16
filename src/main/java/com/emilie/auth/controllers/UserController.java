@@ -59,6 +59,7 @@ public class UserController {
     public String login(@RequestParam(value="error", required=false) String error, @RequestParam(value="logout", required=false) String logout, Model model) {
         if(error != null) {
             model.addAttribute("errorMessage", "Invalid Credentials, Please try again.");
+            System.out.println(error);
         }
         if(logout != null) {
             model.addAttribute("logoutMessage", "Logout Successful!");
